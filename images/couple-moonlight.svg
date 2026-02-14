@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="nightBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#191970;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4B0082;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2F1B3C;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Moon glow -->
+    <radialGradient id="moonGlow">
+      <stop offset="0%" style="stop-color:#FFFACD;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F0E68C;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#BDB76B;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Skin tone -->
+    <linearGradient id="skinLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFDAB9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E6B89C;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Clothing gradients -->
+    <linearGradient id="sweater" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#556B2F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3D4F1F;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="cardigan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B7D6B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5C4F3D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Night sky -->
+  <rect width="800" height="600" fill="url(#nightBg)"/>
+  
+  <!-- Stars -->
+  <circle cx="120" cy="80" r="2" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="200" cy="120" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="680" cy="90" r="2.5" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="580" cy="60" r="2" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="480" cy="100" r="1.5" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="320" cy="70" r="2" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="150" cy="150" r="1.5" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="720" cy="130" r="2" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="400" cy="50" r="2.5" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="650" cy="180" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Twinkling stars -->
+  <g opacity="0.6">
+    <path d="M 250 90 L 252 95 L 248 95 Z" fill="#FFFFFF"/>
+    <path d="M 250 100 L 252 95 L 248 95 Z" fill="#FFFFFF"/>
+    <path d="M 600 140 L 602 145 L 598 145 Z" fill="#FFFFFF"/>
+    <path d="M 600 150 L 602 145 L 598 145 Z" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Moon -->
+  <circle cx="650" cy="150" r="80" fill="url(#moonGlow)"/>
+  <circle cx="650" cy="150" r="65" fill="#FFFACD" opacity="0.95"/>
+  <circle cx="650" cy="150" r="50" fill="#FFF8DC"/>
+  <!-- Moon craters -->
+  <circle cx="630" cy="140" r="8" fill="#F0E68C" opacity="0.4"/>
+  <circle cx="665" cy="155" r="6" fill="#F0E68C" opacity="0.3"/>
+  <circle cx="655" cy="170" r="5" fill="#F0E68C" opacity="0.35"/>
+  
+  <!-- Ground/Hill -->
+  <ellipse cx="400" cy="550" rx="500" ry="120" fill="#2F4F4F" opacity="0.8"/>
+  <path d="M 0 450 Q 200 420 400 440 Q 600 420 800 450 L 800 600 L 0 600 Z" fill="#1C2820" opacity="0.9"/>
+  
+  <!-- Grass silhouettes -->
+  <g opacity="0.5">
+    <rect x="50" y="460" width="3" height="40" fill="#1A3D1A"/>
+    <rect x="150" y="470" width="2" height="30" fill="#1A3D1A"/>
+    <rect x="550" y="465" width="3" height="35" fill="#1A3D1A"/>
+    <rect x="720" y="475" width="2" height="28" fill="#1A3D1A"/>
+  </g>
+  
+  <!-- Male figure (left) -->
+  <g>
+    <!-- Head -->
+    <ellipse cx="300" cy="320" rx="42" ry="46" fill="url(#skinLight)"/>
+    <!-- Hair -->
+    <path d="M 258 305 Q 258 275 300 270 Q 342 275 342 305 Q 342 325 336 332 Q 315 280 300 280 Q 285 280 264 332 Q 258 325 258 305" 
+          fill="#2C1810"/>
+    <!-- Neck -->
+    <rect x="286" y="362" width="28" height="22" rx="8" fill="url(#skinLight)"/>
+    <!-- Sweater -->
+    <path d="M 270 384 L 252 415 L 248 520 L 352 520 L 348 415 L 330 384 Z" fill="url(#sweater)"/>
+    <!-- Arm reaching -->
+    <ellipse cx="355" cy="440" rx="22" ry="70" fill="url(#sweater)" transform="rotate(-15 355 440)"/>
+    <ellipse cx="380" cy="460" rx="20" ry="24" fill="url(#skinLight)"/>
+  </g>
+  
+  <!-- Female figure (right) -->
+  <g>
+    <!-- Head -->
+    <ellipse cx="500" cy="310" rx="40" ry="44" fill="url(#skinLight)"/>
+    <!-- Hair (long, flowing) -->
+    <path d="M 460 295 Q 460 260 500 254 Q 540 260 540 295 Q 540 350 530 380 L 470 380 Q 460 350 460 295" 
+          fill="#3D2817"/>
+    <!-- Side hair strands -->
+    <path d="M 465 320 Q 455 340 458 370" stroke="#3D2817" stroke-width="8" fill="none"/>
+    <path d="M 535 320 Q 545 340 542 370" stroke="#3D2817" stroke-width="8" fill="none"/>
+    <!-- Neck -->
+    <rect x="486" y="350" width="28" height="22" rx="8" fill="url(#skinLight)"/>
+    <!-- Cardigan -->
+    <path d="M 470 372 L 450 405 L 442 520 L 558 520 L 550 405 L 530 372 Z" fill="url(#cardigan)"/>
+    <!-- Arm reaching -->
+    <ellipse cx="445" cy="440" rx="22" ry="70" fill="url(#cardigan)" transform="rotate(15 445 440)"/>
+    <ellipse cx="420" cy="460" rx="20" ry="24" fill="url(#skinLight)"/>
+  </g>
+  
+  <!-- Hands holding in center -->
+  <g>
+    <rect x="380" y="450" width="40" height="28" rx="10" fill="url(#skinLight)"/>
+    <!-- Fingers intertwined -->
+    <path d="M 385 455 L 385 470 M 395 455 L 395 470 M 405 455 L 405 470 M 415 455 L 415 470" 
+          stroke="#E6B89C" stroke-width="2.5"/>
+  </g>
+  
+  <!-- Big heart glowing above -->
+  <g>
+    <!-- Heart glow effect -->
+    <path d="M 400 400 L 375 425 Q 368 432 368 445 Q 368 463 380 475 L 400 495 L 420 475 Q 432 463 432 445 Q 432 432 425 425 Z" 
+          fill="#FF1493" opacity="0.3" filter="blur(4px)"/>
+    <!-- Main heart -->
+    <path d="M 400 405 L 378 428 Q 372 435 372 446 Q 372 460 382 470 L 400 488 L 418 470 Q 428 460 428 446 Q 428 435 422 428 Z" 
+          fill="#FF1493" opacity="0.95"/>
+    <!-- Heart highlight -->
+    <ellipse cx="390" cy="425" rx="8" ry="12" fill="#FF69B4" opacity="0.6"/>
+  </g>
+  
+  <!-- Floating hearts -->
+  <text x="340" y="390" font-size="20" fill="#FF69B4" opacity="0.7">❤</text>
+  <text x="450" y="395" font-size="18" fill="#FFB6C1" opacity="0.6">❤</text>
+  <text x="395" y="365" font-size="16" fill="#FF1493" opacity="0.8">❤</text>
+  
+  <!-- Moonlight on figures -->
+  <ellipse cx="300" cy="300" rx="50" ry="60" fill="#FFFACD" opacity="0.1"/>
+  <ellipse cx="500" cy="290" rx="50" ry="60" fill="#FFFACD" opacity="0.1"/>
+</svg>
