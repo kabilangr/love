@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FFA07A;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#FFB88C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FEC8A0;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Sun gradient -->
+    <radialGradient id="sunGrad">
+      <stop offset="0%" style="stop-color:#FFE5B4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:0.4" />
+    </radialGradient>
+    
+    <!-- Water gradient -->
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8C94;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FF6B7A;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Silhouette gradient -->
+    <linearGradient id="silhouetteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1810;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A0F0A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="800" height="600" fill="url(#skyGrad)"/>
+  
+  <!-- Sun -->
+  <circle cx="400" cy="280" r="120" fill="url(#sunGrad)"/>
+  <circle cx="400" cy="280" r="100" fill="#FFE5B4" opacity="0.6"/>
+  <circle cx="400" cy="280" r="80" fill="#FFF8DC" opacity="0.8"/>
+  
+  <!-- Sun rays -->
+  <path d="M 400 160 L 400 100" stroke="#FFD700" stroke-width="3" opacity="0.5"/>
+  <path d="M 480 220 L 520 180" stroke="#FFD700" stroke-width="3" opacity="0.5"/>
+  <path d="M 540 280 L 600 280" stroke="#FFD700" stroke-width="3" opacity="0.5"/>
+  <path d="M 480 340 L 520 380" stroke="#FFD700" stroke-width="3" opacity="0.5"/>
+  <path d="M 320 220 L 280 180" stroke="#FFD700" stroke-width="3" opacity="0.5"/>
+  <path d="M 260 280 L 200 280" stroke="#FFD700" stroke-width="3" opacity="0.5"/>
+  <path d="M 320 340 L 280 380" stroke="#FFD700" stroke-width="3" opacity="0.5"/>
+  
+  <!-- Water reflection -->
+  <rect y="400" width="800" height="200" fill="url(#waterGrad)"/>
+  <ellipse cx="400" cy="450" rx="100" ry="30" fill="#FFE5B4" opacity="0.3"/>
+  <ellipse cx="400" cy="460" rx="80" ry="20" fill="#FFD700" opacity="0.2"/>
+  
+  <!-- Ground/Beach -->
+  <ellipse cx="400" cy="520" rx="600" ry="100" fill="#8B7355" opacity="0.6"/>
+  
+  <!-- Male silhouette -->
+  <g fill="url(#silhouetteGrad)">
+    <!-- Head -->
+    <circle cx="320" cy="380" r="28"/>
+    <!-- Body -->
+    <rect x="305" y="408" width="30" height="70" rx="8"/>
+    <!-- Arm reaching to partner -->
+    <rect x="335" y="430" width="60" height="12" rx="6" transform="rotate(-10 335 436)"/>
+    <!-- Other arm -->
+    <rect x="280" y="425" width="25" height="10" rx="5" transform="rotate(-20 280 430)"/>
+    <!-- Legs -->
+    <rect x="305" y="475" width="12" height="50" rx="6"/>
+    <rect x="323" y="475" width="12" height="50" rx="6"/>
+  </g>
+  
+  <!-- Female silhouette -->
+  <g fill="url(#silhouetteGrad)">
+    <!-- Head -->
+    <circle cx="470" cy="370" r="26"/>
+    <!-- Body (dress shape) -->
+    <path d="M 445 398 L 445 445 L 435 490 L 505 490 L 495 445 L 495 398 Z"/>
+    <!-- Arm reaching to partner -->
+    <rect x="385" y="418" width="60" height="11" rx="6" transform="rotate(10 385 423)"/>
+    <!-- Other arm -->
+    <rect x="495" y="415" width="25" height="10" rx="5" transform="rotate(20 495 420)"/>
+  </g>
+  
+  <!-- Joined hands (heart shape) -->
+  <path d="M 395 440 Q 390 435 390 428 Q 390 420 396 416 Q 402 412 408 416 Q 414 420 414 428 Q 414 435 409 440 L 402 447 Z" 
+        fill="#FF1493" opacity="0.8"/>
+  
+  <!-- Small hearts floating -->
+  <text x="450" y="320" font-size="20" fill="#FF69B4" opacity="0.6">❤</text>
+  <text x="350" y="340" font-size="16" fill="#FF1493" opacity="0.5">❤</text>
+  <text x="500" y="360" font-size="18" fill="#FFB6C1" opacity="0.6">❤</text>
+</svg>

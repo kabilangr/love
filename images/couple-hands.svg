@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE5EC;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFC9D9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB3C6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Bokeh effect -->
+    <radialGradient id="bokeh1">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFE5EC;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Skin tone gradient -->
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFDAB9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E6B89C;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Clothing gradients -->
+    <linearGradient id="maleShirt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="femaleDress" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF69B4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF1493;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <!-- Bokeh circles -->
+  <circle cx="150" cy="120" r="60" fill="url(#bokeh1)" opacity="0.5"/>
+  <circle cx="650" cy="180" r="80" fill="url(#bokeh1)" opacity="0.4"/>
+  <circle cx="700" cy="450" r="70" fill="url(#bokeh1)" opacity="0.5"/>
+  <circle cx="100" cy="500" r="90" fill="url(#bokeh1)" opacity="0.3"/>
+  <circle cx="500" cy="100" r="50" fill="url(#bokeh1)" opacity="0.6"/>
+  
+  <!-- Male figure (left) -->
+  <g>
+    <!-- Head -->
+    <ellipse cx="280" cy="240" rx="45" ry="50" fill="url(#skinGrad)"/>
+    <!-- Hair -->
+    <path d="M 235 220 Q 235 190 280 185 Q 325 190 325 220 Q 325 240 320 245 Q 300 200 280 200 Q 260 200 240 245 Q 235 240 235 220" 
+          fill="#3D2817"/>
+    <!-- Neck -->
+    <rect x="265" y="285" width="30" height="25" rx="8" fill="url(#skinGrad)"/>
+    <!-- Shirt -->
+    <path d="M 245 310 L 230 340 L 230 480 L 330 480 L 330 340 L 315 310 Z" fill="url(#maleShirt)"/>
+    <!-- Arm (reaching) -->
+    <ellipse cx="340" cy="370" rx="20" ry="65" fill="url(#skinGrad)" transform="rotate(-20 340 370)"/>
+    <!-- Hand -->
+    <ellipse cx="380" cy="380" rx="18" ry="22" fill="url(#skinGrad)"/>
+  </g>
+  
+  <!-- Female figure (right) -->
+  <g>
+    <!-- Head -->
+    <ellipse cx="520" cy="250" rx="42" ry="48" fill="url(#skinGrad)"/>
+    <!-- Hair (longer) -->
+    <path d="M 478 230 Q 478 195 520 188 Q 562 195 562 230 Q 562 280 555 300 Q 485 300 478 280 Q 478 250 478 230" 
+          fill="#1A0F0A"/>
+    <!-- Neck -->
+    <rect x="505" y="293" width="30" height="22" rx="8" fill="url(#skinGrad)"/>
+    <!-- Dress -->
+    <path d="M 485 315 L 465 345 L 455 480 L 585 480 L 575 345 L 555 315 Z" fill="url(#femaleDress)"/>
+    <!-- Arm (reaching) -->
+    <ellipse cx="460" cy="370" rx="20" ry="65" fill="url(#skinGrad)" transform="rotate(20 460 370)"/>
+    <!-- Hand -->
+    <ellipse cx="420" cy="380" rx="18" ry="22" fill="url(#skinGrad)"/>
+  </g>
+  
+  <!-- Hands holding (center) -->
+  <g>
+    <!-- Interlocked fingers -->
+    <rect x="380" y="370" width="40" height="30" rx="8" fill="url(#skinGrad)"/>
+    <!-- Connection detail -->
+    <path d="M 385 375 L 385 390 M 395 375 L 395 390 M 405 375 L 405 390 M 415 375 L 415 390" 
+          stroke="#E6B89C" stroke-width="2"/>
+  </g>
+  
+  <!-- Heart above hands -->
+  <g>
+    <!-- Large heart -->
+    <path d="M 400 340 L 380 365 Q 375 370 375 380 Q 375 395 385 405 L 400 420 L 415 405 Q 425 395 425 380 Q 425 370 420 365 Z" 
+          fill="#FF1493" opacity="0.9"/>
+    <!-- Heart glow -->
+    <path d="M 400 340 L 380 365 Q 375 370 375 380 Q 375 395 385 405 L 400 420 L 415 405 Q 425 395 425 380 Q 425 370 420 365 Z" 
+          fill="#FFFFFF" opacity="0.3"/>
+    <!-- Small hearts -->
+    <text x="360" y="330" font-size="24" fill="#FF69B4" opacity="0.7">❤</text>
+    <text x="430" y="330" font-size="24" fill="#FF69B4" opacity="0.7">❤</text>
+    <text x="395" y="300" font-size="20" fill="#FFB6C1" opacity="0.6">❤</text>
+  </g>
+  
+  <!-- Sparkles -->
+  <circle cx="350" cy="200" r="3" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="450" cy="210" r="2" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="300" cy="350" r="2.5" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="500" cy="360" r="3" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="400" cy="450" r="2" fill="#FFFFFF" opacity="0.6"/>
+</svg>
