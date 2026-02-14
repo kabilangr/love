@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Soju, Poppy, Radha, Shalniya</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #fff5f8 0%, #f8bbd0 100%);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        overflow: hidden;
+        color: #880e4f;
+      }
+
+      .container {
+        text-align: center;
+        padding: 20px;
+        max-width: 90%;
+        z-index: 10;
+      }
+
+      /* Heart Animation */
+      .heart {
+        font-size: clamp(80px, 20vw, 120px); /* Scales based on screen width */
+        color: #e91e63;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        animation: pulse 1.5s infinite alternate;
+        display: inline-block;
+        filter: drop-shadow(0 0 10px rgba(233, 30, 99, 0.4));
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+
+      h1 {
+        margin-top: 20px;
+        font-size: clamp(1.8rem, 8vw, 2.8rem);
+        opacity: 0;
+        animation: fadeIn 2s forwards 0.5s;
+      }
+
+      p {
+        font-size: clamp(1rem, 4vw, 1.3rem);
+        opacity: 0;
+        margin-bottom: 10px;
+        animation: fadeIn 2s forwards 1s;
+      }
+
+      #message {
+        margin-top: 30px;
+        font-size: clamp(1.2rem, 5vw, 1.6rem);
+        font-weight: bold;
+        color: #ad1457;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.8s ease;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Background floating elements */
+      .floating-heart {
+        position: absolute;
+        bottom: -50px;
+        color: rgba(233, 30, 99, 0.2);
+        font-size: 24px;
+        animation: float 8s infinite linear;
+        z-index: 1;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-110vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      /* Mobile Adjustments */
+      @media (max-width: 480px) {
+        .container {
+          padding: 10px;
+        }
+        .heart {
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Generate random floating hearts
+      for (let i = 0; i < 15; i++) {
+        let heart = document.createElement("div");
+        heart.className = "floating-heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = Math.random() * 5 + 5 + "s";
+        heart.style.animationDelay = Math.random() * 5 + "s";
+        heart.style.fontSize = Math.random() * 20 + 10 + "px";
+        document.body.appendChild(heart);
+      }
+
+      function showMessage() {
+        var msg = document.getElementById("message");
+        msg.style.display = "block";
+        setTimeout(() => {
+          msg.style.opacity = "1";
+        }, 50);
+      }
+    </script>
+
+    <div class="container">
+      <div class="heart" onclick="showMessage()">❤️</div>
+      <h1>Happy Valentine's Day!</h1>
+      <p>To my Soju, Poppy, Radha, and Shalniya...</p>
+      <p>Tap the heart for a surprise.</p>
+
+      <div id="message">You are my favorite person in every universe. 💖</div>
+    </div>
+  </body>
+</html>
