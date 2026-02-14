@@ -44,9 +44,6 @@
       
       .gallery.show {
         display: grid;
-      }
-      
-      .gallery.show {
         opacity: 1;
       }
 
@@ -245,13 +242,11 @@
         // Show gallery first
         gallery.classList.add("show");
         
-        // Then show message after a delay
+        // Show message after gallery animation completes
         setTimeout(() => {
           msg.style.display = "block";
-          setTimeout(() => {
-            msg.style.opacity = "1";
-          }, 50);
-        }, 800);
+          msg.style.opacity = "1";
+        }, 850);
       }
     </script>
 
